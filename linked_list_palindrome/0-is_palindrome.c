@@ -23,23 +23,7 @@ static listint_t *reverse_list(listint_t *head)
 	return (prev);
 }
 
-/**
- * get_list_length - calculates the length of a linked list
- * @head: pointer to the head of the list
- * Return: length of the list
- */
-static int get_list_length(listint_t *head)
-{
-	int length = 0;
 
-	while (head != NULL)
-	{
-		length++;
-		head = head->next;
-	}
-
-	return (length);
-}
 
 /**
  * is_palindrome - checks if a singly linked list is a palindrome
@@ -51,15 +35,12 @@ int is_palindrome(listint_t **head)
 	listint_t *slow, *fast, *second_half, *prev_slow;
 	listint_t *midnode = NULL;
 	int result = 1;
-	int length;
 
 	if (head == NULL || *head == NULL)
 		return (1);
 
 	if ((*head)->next == NULL)
 		return (1);
-
-	length = get_list_length(*head);
 
 	slow = fast = *head;
 	prev_slow = NULL;
