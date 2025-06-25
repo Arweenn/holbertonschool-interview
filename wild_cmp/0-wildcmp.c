@@ -3,7 +3,7 @@
 /**
  * wildcmp - compares two strings
  * @s1: first string to compare
- * @s2: second string 
+ * @s2: second string
  *
  * Description: The '*' character in s2 can match any characters in s1.
  *
